@@ -1,7 +1,6 @@
-/* CRUD Create | Update | Select | Delete */  
+/* CRUD Create | Update | Read | Delete */  
 
 USE work;
-
 
 /* Eingrenzen/Filtern durch WHERE */
 /* UPDATE */
