@@ -16,9 +16,9 @@ UPDATE cats SET cat_name="Alonzo" WHERE id = 2; #Sicher!
 #SELECT cat_age,cat_name FROM cats; #2 Felder kombiniert
 #SELECT cat_age AS "Alter", cat_name AS "Name" FROM cats; #2 Felder / neue Namen
 
-SELECT 
+SELECT # Neue Ergebnistabelle wird angelegt ...
 	cat_age AS "Alter", cat_name AS "Name"  # Feld-Auswahl / Anzeige-Name
-FROM cats 
+FROM cats #Tabelle
 /*Restriktionen durch WHERE*/
 #WHERE id = 1  #id
 #WHERE fur_color = "red" #fur_color
@@ -28,6 +28,6 @@ WHERE cat_age > 35; #Test
 /* Delete - Vorsicht!! */
 DELETE FROM cats; #Unsicher!
 DELETE FROM cats WHERE id = 2; #Sicher --> KEY
-DELETE FROM cats WHERE cat_age > 35; 
+DELETE FROM cats WHERE cat_age > 35; #Unsicher!
 
 SELECT * FROM cats;
