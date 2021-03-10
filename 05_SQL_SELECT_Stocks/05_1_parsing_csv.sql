@@ -25,15 +25,14 @@ CREATE TABLE IF NOT EXISTS ccc_list # Tab. anlegen
 
 DESCRIBE ccc_list;
 
-/*
-/* Parsen & Einlesen der Daten 
-LOAD DATA LOCAL INFILE "C:/Users/micro/Desktop/DB_work/04_SQL_DataImport/data/cats_export.csv"
-INTO TABLE cats
+/* Parsen & Einlesen der Daten */
+LOAD DATA LOCAL INFILE "C:/Users/micro/Desktop/DB_work/05_SQL_SELECT_stocks/data/ccc_dez_2019.csv"
+INTO TABLE ccc_list
 FIELDS TERMINATED BY ";"
 LINES TERMINATED BY "\n"
 IGNORE 1 LINES;
 
-SELECT * FROM cats;
-*/
+#SELECT * FROM ccc_list;
+
 
 
