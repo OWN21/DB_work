@@ -32,7 +32,7 @@ FIELDS TERMINATED BY ";"
 LINES TERMINATED BY "\n"
 IGNORE 1 LINES;
 
-#SELECT * FROM ccc_list;
+SELECT * FROM ccc_list LIMIT 20; #Testausgabe auf 20 begrenzt
 
 
 
