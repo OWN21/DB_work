@@ -1,4 +1,6 @@
 /* Bedingtes Löschen*/
+USE work;
+
 DROP TABLE IF EXISTS users;
 
 /* Variante 2 Doppelte Usernamen NICHT mehr möglich --> UNIQUE */
@@ -16,4 +18,5 @@ DESCRIBE users;
 INSERT INTO users (user_name,first_name,family_name) VALUES ("max","Max","Mütze");
 INSERT INTO users (user_name,first_name,family_name) VALUES ("maxine","Maxine","Mütze");
 INSERT INTO users (user_name,first_name,family_name) VALUES ("max2","Max","Mützerich");
+
 SELECT * FROM users;

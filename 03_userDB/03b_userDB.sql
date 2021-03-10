@@ -1,4 +1,7 @@
 /* Bedingtes Löschen*/
+
+USE work;
+
 DROP TABLE IF EXISTS users;
 
 /* Variante 3 + pwd + SHA1*/
@@ -22,6 +25,7 @@ INSERT INTO users (user_name,user_pwd,first_name,family_name) VALUES ("max2","#u
 */
 
 /* Besser SHA1() */
+
 INSERT INTO users (user_name,user_pwd,first_name,family_name) VALUES ("max", sha1("1234"), "Max", "Mütze");
 INSERT INTO users (user_name,user_pwd,first_name,family_name) VALUES ("maxine",sha1("#7Dx0!"), "Maxine", "Mütze");
 INSERT INTO users (user_name,user_pwd,first_name,family_name) VALUES ("max2", sha1("#user123"), "Max", "Mützerich");
