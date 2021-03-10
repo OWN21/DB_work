@@ -16,4 +16,4 @@
 
 6. Click close. 
     
-7. estart mysql
+7. Restart mysql
