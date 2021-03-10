@@ -2,6 +2,7 @@
 USE work;  #Focus auf DB
 DROP TABLE IF EXISTS cats; #Tab löschen, falls vorhanden
 
+/* Zweite Variante: Increment von Innen / Daten von Außen */
 CREATE TABLE IF NOT EXISTS cats # Tab. anlegen
 (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
