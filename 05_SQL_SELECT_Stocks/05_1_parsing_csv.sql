@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS ccc_list # Tab. anlegen
 DESCRIBE ccc_list;
 
 /* Parsen & Einlesen der Daten */
-LOAD DATA LOCAL INFILE "C:/Users/micro/Desktop/DB_work/05_SQL_SELECT_stocks/data/ccc_dez_2019.csv"
+LOAD DATA LOCAL INFILE "C:/Users/ACER FRITZ 10/Documents/GitHub/DB_work/05_SQL_SELECT_Stocks/data/ccc_dez_2019.csv"
 INTO TABLE ccc_list
 FIELDS TERMINATED BY ";"
 LINES TERMINATED BY "\n"
