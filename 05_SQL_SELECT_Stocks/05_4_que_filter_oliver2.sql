@@ -7,7 +7,7 @@ USE stocks;
 -- sortieren nach Sektor /aufsteigend (alphabetisch)
 
 
--- Eingrenzen/ Filtern WHERE& AND/OR/NOT etc.
+-- Eingrenzen/ Filtern WHERE & AND/ OR/ NOT etc.
 
 SELECT
 ticker AS "SYM",
@@ -18,7 +18,7 @@ dividend "Dividene",
 CONCAT(sector," | " ,industry) "Operations"
 
 FROM stocks.ccc_list
--- Einzeldaten Strings
+-- Einzeldaten der Strings
 #WHERE sector = "Communication Services"
 #WHERE industry = "Media"
 
