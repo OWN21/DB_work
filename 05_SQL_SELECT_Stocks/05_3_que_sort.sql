@@ -26,5 +26,5 @@ CONCAT(sector," | ",industry) "Operations"
 FROM stocks.ccc_list 
 #ORDER BY price ASC #beginnend mit günstigster Aktie 
 #ORDER BY price DESC #beginnend mit teuerster Aktie 
-ORDER BY no_yrs DESC, sector ASC  # Kombi. numerisch/alphabetisch
+ORDER BY no_yrs DESC, sector ASC  # Kombi. numerisch/alphabetisch (längste Div.-Historie + Sektor)
 LIMIT 20; 
