@@ -12,6 +12,7 @@ USE stocks;
 */
 
 -- Eingrenzen/Filtern WHERE & AND/OR/NOT etc.
+/*
 SELECT 
 ticker AS "SYM",
 c_name "Unternehmen",
@@ -32,8 +33,38 @@ WHERE sector = "Communication Services" AND NOT industry = "Media"
 ORDER BY price ASC
 #ORDER BY payouts ASC
 LIMIT 40; 
+*/
 
+-- Eingrenzen/Filtern WHERE & LIKE + Parameter
+SELECT 
+ticker "SYM",
+c_name "Unternehmen",
+industry "Branche"
+FROM stocks.ccc_list 
+-- scharfe Suche nach Strings
+#WHERE industry = "Media"
+-- unschärfere Suche --
+-- Branchenname beginnt mit ... , dahinter beliebige Chars
+#WHERE industry LIKE "Air%"
+-- Branchenname endet mit ... , davor beliebige Chars
+#WHERE industry LIKE "%ment"
+-- Branchenname enthaelt ...
+#WHERE industry LIKE "%ood%"
 
+-- Branchenname endet/beginnt mit ... , danach/davor/inmitten genau _ Char
+#WHERE industry LIKE "__dia"
+#WHERE industry LIKE "Med__"
+#WHERE industry LIKE "Me__a"
+#WHERE industry LIKE "M_d_a"
+#WHERE industry LIKE "_ir%"
+#WHERE industry LIKE "_ood%"
+
+#WHERE industry LIKE "%ment" 
+#WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" 
+WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
+
+ORDER BY industry ASC
+LIMIT 40; 
 
 
 
