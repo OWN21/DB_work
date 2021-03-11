@@ -3,7 +3,7 @@
 
 CREATE DATABASE IF NOT EXISTS stocks;
 
-USE stocks;  #Focus auf DB
+USE stocks;  #Focus auf DB setzen
 
 DROP TABLE IF EXISTS ccc_list; #Tab löschen, falls vorhanden
 
