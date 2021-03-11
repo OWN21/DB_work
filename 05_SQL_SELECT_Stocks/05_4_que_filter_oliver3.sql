@@ -6,7 +6,7 @@ SELECT
 
 ticker "SYM",
 c_name "UNTERNEHMEN",
-industry "Branche"
+industry "BRANCHE"
 
 FROM stocks.ccc_list
 
