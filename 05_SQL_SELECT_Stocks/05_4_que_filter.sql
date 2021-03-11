@@ -76,6 +76,7 @@ WHERE c_name RLIKE "^[AZ]"
 ORDER BY c_name;*/
 
 --  Eingrenzen/Filtern WHERE & IN / NOT IN
+/*
 SELECT 
 ticker "SYM",
 c_name "Unternehmen",
@@ -85,6 +86,18 @@ FROM stocks.ccc_list
 #WHERE sector = "Financials"
 #WHERE industry IN ("Beverages","Banks") #OR ...
 WHERE sector = "Financials" AND industry NOT IN ("Banks","Insurance")
-ORDER BY industry DESC;
+ORDER BY industry DESC;*/
 
-
+-- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
+SELECT 
+ticker "SYM",
+c_name "Unternehmen",
+sector "Sektor",
+industry "Branche",
+price "Aktienpreis / $"
+FROM stocks.ccc_list 
+WHERE sector = "Financials" AND price > 30.0 
+#WHERE sector = "Financials" AND (price BETWEEN 30.0 AND 50.0)
+#WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0)
+ORDER BY price DESC
+LIMIT 200;
