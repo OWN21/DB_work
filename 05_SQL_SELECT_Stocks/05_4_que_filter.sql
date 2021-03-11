@@ -36,6 +36,7 @@ LIMIT 40;
 */
 
 -- Eingrenzen/Filtern WHERE & LIKE + Parameter
+/*
 SELECT 
 ticker "SYM",
 c_name "Unternehmen",
@@ -64,7 +65,13 @@ FROM stocks.ccc_list
 WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
 
 ORDER BY industry ASC
-LIMIT 40; 
+LIMIT 40; */
 
+-- Eingrenzen/Filtern WHERE & RegEx
+SELECT
+	c_name "Unternehmen"
+FROM stocks.ccc_list
+WHERE c_name RLIKE "^[AZ]"
+ORDER BY c_name;
 
 
