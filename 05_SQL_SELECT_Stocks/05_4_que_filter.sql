@@ -21,11 +21,16 @@ dividend "Dividende",
 CONCAT(sector," | ",industry) "Operations"
 FROM stocks.ccc_list 
 -- Einzeldaten / Strings
-WHERE sector = "Communication Services"
-
-
-#ORDER BY price ASC
-ORDER BY payouts ASC
+#WHERE sector = "Communication Services"
+#WHERE industry = "Media"
+-- Kombination durch AND
+#WHERE sector = "Communication Services" AND industry = "Entertainment"
+-- Kombination durch AND / OR
+#WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
+-- Kombination durch AND / NOT
+WHERE sector = "Communication Services" AND NOT industry = "Media"
+ORDER BY price ASC
+#ORDER BY payouts ASC
 LIMIT 40; 
 
 
