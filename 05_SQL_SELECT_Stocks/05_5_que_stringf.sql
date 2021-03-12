@@ -9,6 +9,7 @@ USE stocks;
     LENGTH() --> String-Laenge
     REPLACE() --> Ersetzen von Stringanteilen
     TRIM() --> Trimmen vor/nach String (Whitespace)
+    LINK: https://dev.mysql.com/doc/refman/5.6/en/string-functions.html
 */
 
 -- CONCAT() / Verknuepfung "string" + "string" ....
@@ -38,17 +39,17 @@ FROM stocks.ccc_list
 LIMIT 10;*/
 
 -- LENGTH() --> String-Laenge
-/*SELECT
-	ticker AS "SYM",
-    c_name "Unternehmen",
-    concat("Ops: ",sector," : ",industry) AS "Operation",
-    length(concat("Ops: ",sector,":",industry)) AS "StrLen"
+SELECT
+	ticker SYM,
+    c_name Unternehmen,
+    concat("Ops: ",sector," : ",industry) Operation,
+    length(concat("Ops: ",sector,":",industry)) StrLen
 FROM stocks.ccc_list
-ORDER BY "StrLen" DESC
-LIMIT 10;*/
+ORDER BY StrLen DESC
+LIMIT 20;
 
 -- REPLACE() --> Ersetzen von Stringanteilen
-SELECT
+/*SELECT
 	ticker AS "SYM",
     #c_name "Unternehmen",
     #replace(c_name,"Inc.","Incorporated") AS "Incorporated"
@@ -56,8 +57,9 @@ SELECT
 FROM stocks.ccc_list
 #WHERE c_name LIKE "%Inc."
 WHERE c_name LIKE "%Corp."
-LIMIT 20;
+LIMIT 20;*/
 
+-- TRIM() --> Trimmen vor/nach String (Whitespace) Siehe Link
 
 
 
