@@ -9,4 +9,17 @@ USE stocks;
 */
 
 -- Welche VERSCHIEDENEN Sektoren ?
+SELECT DISTINCT sector FROM stocks.ccc_list ORDER BY sector ASC;
 -- Wieviele VERSCHIEDENE Sektoren ?
+SELECT 
+	COUNT(DISTINCT sector) "Anzahl Industriesektoren"
+FROM stocks.ccc_list;
+
+-- Welche VERSCHIEDENEN Branchen ?
+SELECT DISTINCT industry FROM stocks.ccc_list ORDER BY industry ASC;
+-- Wieviele VERSCHIEDENE Branchen ?
+SELECT 
+	COUNT(DISTINCT industry) "Anzahl Branchen"
+FROM stocks.ccc_list;
+
+
