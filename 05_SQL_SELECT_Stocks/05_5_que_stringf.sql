@@ -38,17 +38,25 @@ FROM stocks.ccc_list
 LIMIT 10;*/
 
 -- LENGTH() --> String-Laenge
-SELECT
+/*SELECT
 	ticker AS "SYM",
-    lower(c_name) "Unternehmen",
+    c_name "Unternehmen",
     concat("Ops: ",sector," : ",industry) AS "Operation",
-    length(concat("Ops: ",sector," : ",industry)) AS "StrLen"
+    length(concat("Ops: ",sector,":",industry)) AS "StrLen"
 FROM stocks.ccc_list
 ORDER BY "StrLen" DESC
-LIMIT 10;
+LIMIT 10;*/
 
-
-
+-- REPLACE() --> Ersetzen von Stringanteilen
+SELECT
+	ticker AS "SYM",
+    #c_name "Unternehmen",
+    #replace(c_name,"Inc.","Incorporated") AS "Incorporated"
+    replace(c_name,"Corp.","Corporations") AS "Corporation"
+FROM stocks.ccc_list
+#WHERE c_name LIKE "%Inc."
+WHERE c_name LIKE "%Corp."
+LIMIT 20;
 
 
 
