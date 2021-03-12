@@ -35,6 +35,24 @@ HAVING Branchen > 10 -- Filter in aggr. Felder / nach GROUP
 ORDER BY Branchen DESC
 ;
 
+-- Wieviele Firmen gibt es in den jeweiligen Branchen?
+SELECT
+    industry AS Branche,
+    #COUNT(industry) Unternehmen
+    COUNT(DISTINCT c_name) Unternehmen
+FROM stocks.ccc_list
+GROUP BY industry
+HAVING Unternehmen >= 10
+ORDER BY Unternehmen DESC;
+
+-- Wieviele Unternehmen zahlen 12/4/2/1 ?
+SELECT
+    payouts "Auszahlungen p.a.",
+    COUNT(payouts) "Anzahl"
+FROM stocks.ccc_list
+GROUP BY payouts
+ORDER BY payouts DESC;
+
 
 
 
