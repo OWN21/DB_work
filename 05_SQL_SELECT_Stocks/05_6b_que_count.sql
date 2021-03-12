@@ -53,7 +53,24 @@ FROM stocks.ccc_list
 GROUP BY payouts
 ORDER BY payouts DESC;
 
+-- Welche Unternehmen zahlen monatlich? // Übung
+SELECT
+	ticker SYM,
+    c_name Unternehmen,
+    industry Branche
+FROM stocks.ccc_list
+WHERE payouts = 1 #12
+ORDER BY c_name ASC;
 
+-- Auszahlungsrhytmus ??
+SELECT 
+    payouts AS "Rhythm",
+    REPLACE(REPLACE(REPLACE(REPLACE(payouts,"12","monthly"),"4","quarterly"),"2","half-yearly"),"1","yearly") 
+	AS "Rhythm by Name", 
+    COUNT(payouts) AS "No. of Companies"
+FROM ccc_list 
+GROUP BY payouts
+ORDER BY COUNT(payouts) DESC;
 
 
 
