@@ -67,10 +67,10 @@ SELECT
     payouts AS "Rhythm",
     REPLACE(REPLACE(REPLACE(REPLACE(payouts,"12","monthly"),"4","quarterly"),"2","half-yearly"),"1","yearly") 
 	AS "Rhythm by Name", 
-    COUNT(payouts) AS "No. of Companies"
+    COUNT(payouts) AS Companies
 FROM ccc_list 
 GROUP BY payouts
-ORDER BY COUNT(payouts) DESC;
+ORDER BY Companies DESC;
 
 
 
