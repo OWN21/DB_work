@@ -22,4 +22,21 @@ SELECT
 	COUNT(DISTINCT industry) "Anzahl Branchen"
 FROM stocks.ccc_list;
 
+-- Wieviele VERSCHIEDENE Branchen gibt es 
+-- in den den jeweiligen Industriesektoren?
+SELECT
+	sector Industriesektor, # NICHT aggregiert --> organisch
+    COUNT(DISTINCT industry) Branchen #aggregiert. durch Fkt. entstanden
+FROM stocks.ccc_list
+WHERE sector LIKE "Consumer%"  -- Filter in NICHT aggr. Feldern 
+#WHERE sector LIKE "%ials"  -- Filter in NICHT aggr. Feldern 
+GROUP BY sector
+HAVING Branchen > 10 -- Filter in aggr. Felder / nach GROUP
+ORDER BY Branchen DESC
+;
+
+
+
+
+
 
