@@ -21,19 +21,38 @@ FROM stocks.ccc_list
 LIMIT 10;*/
 
 -- UPPER() --> alles in Großbuchstaben
-SELECT
+/*SELECT
 	ticker AS "SYM",
     upper(c_name) "Unternehmen"
 FROM stocks.ccc_list
 #ggf. Restriktionen
-LIMIT 10;
+LIMIT 10;*/
 
 -- LOWER() --> alles in Kleinbuchstaben (zb. bei mail-Adressen)
-SELECT
+/*SELECT
 	ticker AS "SYM",
     lower(c_name) "Unternehmen",
     lower(concat("Ops: ",sector," : ",industry)) AS "Operation"
 FROM stocks.ccc_list
 #ggf. Restriktionen
+LIMIT 10;*/
+
+-- LENGTH() --> String-Laenge
+SELECT
+	ticker AS "SYM",
+    lower(c_name) "Unternehmen",
+    concat("Ops: ",sector," : ",industry) AS "Operation",
+    length(concat("Ops: ",sector," : ",industry)) AS "StrLen"
+FROM stocks.ccc_list
+ORDER BY "StrLen" DESC
 LIMIT 10;
+
+
+
+
+
+
+
+
+
 
