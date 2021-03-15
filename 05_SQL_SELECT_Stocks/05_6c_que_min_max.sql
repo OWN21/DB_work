@@ -21,8 +21,8 @@ SELECT
     c_name Unternehmen,
     price Aktienkurs
 FROM stocks.ccc_list
-#WHERE price = (SELECT max(price) FROM stocks.ccc_list)  # Subquery / Klammern!
-WHERE price = (SELECT min(price) FROM stocks.ccc_list) 
+WHERE price = (SELECT max(price) FROM stocks.ccc_list)  # Subquery / Klammern!
+#WHERE price = (SELECT min(price) FROM stocks.ccc_list) 
 ;
 
 SELECT
